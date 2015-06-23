@@ -1,1 +1,7 @@
-%h1 Show Page
+%h1= @post.title
+%p= @post.link
+%p= @post.description
+
+= link_to "Home", root_url
+= link_to "Edit", edit_post_path(@post)
+= link_to "Destroy", post_path, method: :delete, data: {confirm: "Are You sure?"}

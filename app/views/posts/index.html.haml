@@ -1,1 +1,4 @@
-%h1 Placeholder for Index page
+- @posts.each do |post|
+	%h1= link_to post.title, post
+
+= link_to "Add Nostalgia", new_post_path
