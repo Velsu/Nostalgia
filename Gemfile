@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'haml', '~> 4.0.6'
 gem 'simple_form', '~> 3.1.0'
 gem 'devise', '~> 3.4.1'
+gem 'paperclip', '~> 4.2.2'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
