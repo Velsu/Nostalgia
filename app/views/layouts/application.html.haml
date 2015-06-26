@@ -12,17 +12,17 @@
 
 %body
 	%header
-		.inner_header
-			= link_to "Nostalgia", root_url, id: "logo"
-			%nav
-				- if user_signed_in?
-					= link_to "Add Nostalgia", new_post_path
-					= link_to current_user.name, edit_user_registration_path
-					= link_to "Log out", destroy_user_session_path, method: :delete
-				- else
-					= link_to "Sign up", new_user_registration_path
-					= link_to "Log in", new_user_session_path
+		= link_to "Nostalgia", root_url, id: "logo"
+		%nav
+			- if user_signed_in?
+				= link_to "Add Nostalgia", new_post_path
+				= link_to current_user.name, edit_user_registration_path
+				= link_to "Log out", destroy_user_session_path, method: :delete
+			- else
+				= link_to "Sign up", new_user_registration_path
+				= link_to "Log in", new_user_session_path
 
 	%p.notice= notice
 	%p.alert= alert
-	=yield
+	.wrapper
+		=yield
