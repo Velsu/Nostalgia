@@ -1,3 +1,21 @@
+- if user_signed_in?
+	%p#intro
+		Welcome
+		= current_user.name
+		%br/
+		%span
+			Share Your Nostalgia with us!
+-else
+	%p#intro
+		Feeling Nostalgic?
+		%br
+		%span
+			Do You have a video game from the past that made big impact on You? Sign up now and share it with us!
+			%br
+			%span
+				= link_to "Sign Up", new_user_registration_path, class: "main-button"
+
+
 #posts
 	- @posts.each do |post|
 		.post
